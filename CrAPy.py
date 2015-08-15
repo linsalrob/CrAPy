@@ -22,7 +22,11 @@ def average_match(e, l, ignore_self=False):
 
 
 
-data_file = "test_data/output.contigs2reads.contigs.short.txt"
+#data_file = "output.contigs2reads.contigs.short.txt"
+try :
+    data_file = sys.argv[1]
+except:
+    sys.exit(sys.argv[0] + " <contigs file>")
 
 data = {}
 with open(data_file, 'r') as fin:
