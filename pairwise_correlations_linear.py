@@ -60,9 +60,5 @@ if __name__ == '__main__':
     results = []
     for i in range(len(ids)):
         for j in range(i+1, len(ids)):
-            results.append(pairwise_correlation(data, ids, i, j))
-
-    for r in results:
-        print("\t".join(map(str, r)))
-
+            print("\t".join(pairwise_correlation(data, ids, i, j)))
 
